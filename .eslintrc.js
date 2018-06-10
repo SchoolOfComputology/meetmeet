@@ -1,9 +1,11 @@
 module.exports = {
     "env": {
         "browser": true,
-        "es6": true
+        "es6": true,
+        "amd": true
     },
-    "extends": "eslint:recommended",
+    "plugins": ["node"],
+    "extends": ["eslint:recommended", "plugin:node/recommended"],
     "parserOptions": {
         "sourceType": "module"
     },
@@ -23,6 +25,7 @@ module.exports = {
         "semi": [
             "error",
             "always"
-        ]
+        ],
+        "node/exports-style": ["error", "module.exports"]
     }
 };

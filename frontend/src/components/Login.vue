@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   name: 'Login',
   data () {
@@ -19,9 +20,22 @@ export default {
   },
   methods: {
     loginClick: function () {
-      alert('Wassup ' + this.user.username + '!!')
+	  alert('Wassup ' + this.user.username + '!!')
+	  this.saveUser();
       this.$router.push({ name: 'authenticated', query: { redirect: '/authenticated' } })
-    }
+	},
+	saveUser: function () {
+		axios.post('http://localhost:3000/users', {
+			body: {
+				username: this.user.username,
+				password: this.user.password
+			}
+		})
+		.then(response => {})
+		.catch(e => {
+			this.errors.push(e)
+		})
+	}
   }
 }
 </script>
