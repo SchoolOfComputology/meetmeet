@@ -1,0 +1,20 @@
+{
+  "name": "meetmeet",
+  "version": "1.0.0",
+  "description": "Book calendar events",
+  "main": "index.js",
+  "dependencies": {
+    "eslint": "^4.19.1",
+    "vue-cli": "^2.9.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git remote add origin https://github.com/SchoolOfComputology/meetmeet.git"
+  },
+  "author": "scomputology",
+  "license": "ISC"
+}
